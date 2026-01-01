@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy New Year Manika</title>
+<title>Happy New Year</title>
 
 <style>
 body {
@@ -14,23 +14,22 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .container {
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.96);
   padding: 30px;
   border-radius: 22px;
   max-width: 900px;
   width: 90%;
   box-shadow: 0 15px 40px rgba(255,79,139,0.3);
-  animation: fadeIn 1.8s ease;
+  animation: fadeIn 1.5s ease;
 }
 
 h1 {
   text-align: center;
   color: #ff4f8b;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -62,41 +61,9 @@ h1 {
   color: #ff4f8b;
 }
 
-.song-btn {
-  display: block;
-  margin: 20px auto 0;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 30px;
-  background: #ff4f8b;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.song-btn:hover {
-  background: #ff2f73;
-  transform: scale(1.05);
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hearts */
-.heart {
-  position: fixed;
-  top: -10px;
-  font-size: 18px;
-  color: #ff7aa8;
-  animation: fall 8s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes fall {
-  to { transform: translateY(110vh); }
 }
 
 @media (max-width: 768px) {
@@ -109,20 +76,9 @@ h1 {
 
 <body>
 
-<!-- Floating hearts -->
-<div class="heart" style="left:10%; animation-delay:0s;">💖</div>
-<div class="heart" style="left:30%; animation-delay:2s;">💗</div>
-<div class="heart" style="left:50%; animation-delay:1s;">💞</div>
-<div class="heart" style="left:70%; animation-delay:3s;">💓</div>
-<div class="heart" style="left:90%; animation-delay:4s;">💖</div>
-
-<audio id="bgMusic" loop>
-  <source src="https://dl05.yt-dl.click/tunnel/?id=nnkIQs1E1U-w2kjW62_tS&exp=1767263788301&sig=UIudpPjx5CjsIoT4jLpAil35E896SRZuwaj9-WlsbkY&sec=i89DAlOq9LnaxotuP_9Srx6As_z_CJcPTREMKRP8g58&iv=HPVk3DQnx-A-sMbBMNLOqw" type="audio/mpeg">
-</audio>
-
 <div class="container">
   <h1>✨ Happy New Year ✨</h1>
-  <div class="subtitle">For Manika 💖</div>
+  <div class="subtitle">For someone special 💖</div>
 
   <div class="messages">
     <div class="box">
@@ -130,11 +86,11 @@ h1 {
       You brought smiles on days I didn’t even realize I needed them 🌙💛<br><br>
       This year taught me many lessons, but the most beautiful one was finding comfort in you 🤍<br><br>
       Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected 🌸<br><br>
-      As we step into a new year, I hope it brings more shared laughs 😊, deeper talks 💬, and moments that stay longer than words ✨
+      As we step into a new year, I hope it brings more shared laughs 😊, deeper talks 💬, and moments that stay with us longer than words can explain ✨
     </div>
 
     <div class="box">
-      As this year comes to an end, I can’t help but smile thinking about the moments that made it special 😊✨<br><br>
+      As this year comes to an end, I can’t help but smile thinking about all the moments that made it special 😊✨<br><br>
       There were ups and downs, but some people made everything feel better without even trying 🤍🌷<br><br>
       And at the end of this year, you truly are the best gift I received 🎁🎀💖<br><br>
       I hope the new year brings you happiness, peace, and everything your heart wishes for 🌸✨<br><br>
@@ -145,15 +101,7 @@ h1 {
   <div class="footer">
     Happyyyy Newww Yearrrr 💖🎆
   </div>
-
-  <button class="song-btn" onclick="playMusic()">🎵 Play Music</button>
 </div>
-
-<script>
-function playMusic() {
-  document.getElementById("bgMusic").play();
-}
-</script>
 
 </body>
 </html>
