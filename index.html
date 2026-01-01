@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy New Year Manika</title>
 
 <style>
@@ -13,48 +14,70 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
-  background: rgba(255,255,255,0.9);
-  padding: 35px;
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
   border-radius: 22px;
-  max-width: 800px;
-  text-align: center;
+  max-width: 900px;
+  width: 90%;
   box-shadow: 0 15px 40px rgba(255,79,139,0.3);
-  animation: fadeIn 2s ease;
+  animation: fadeIn 1.8s ease;
 }
 
 h1 {
+  text-align: center;
   color: #ff4f8b;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .subtitle {
-  font-size: 16px;
+  text-align: center;
+  font-size: 14px;
   color: #ff7aa8;
-  margin-bottom: 20px;
-  font-weight: bold;
+  margin-bottom: 25px;
 }
 
-p {
-  color: #444;
+.messages {
+  display: flex;
+  gap: 25px;
+}
+
+.box {
+  flex: 1;
+  background: #fff7fb;
+  padding: 20px;
+  border-radius: 18px;
+  font-size: 15px;
   line-height: 1.8;
-  font-size: 16px;
+  color: #444;
 }
 
-/* Heart animations */
-.heart {
-  position: absolute;
-  font-size: 18px;
-  animation: fall 8s linear infinite;
-  opacity: 0.7;
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #ff4f8b;
 }
 
-@keyframes fall {
-  0% { transform: translateY(-10vh); opacity: 1;}
-  100% { transform: translateY(110vh); opacity: 0;}
+.song-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4f8b;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.song-btn:hover {
+  background: #ff2f73;
+  transform: scale(1.05);
 }
 
 @keyframes fadeIn {
@@ -62,13 +85,23 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 600px) {
-  .container {
-    margin: 15px;
-    padding: 25px;
-  }
-  p {
-    font-size: 15px;
+/* Hearts */
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 18px;
+  color: #ff7aa8;
+  animation: fall 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
+
+@media (max-width: 768px) {
+  .messages {
+    flex-direction: column;
   }
 }
 </style>
@@ -76,44 +109,51 @@ p {
 
 <body>
 
-<!-- Floating heart emojis -->
-<div class="heart" style="left:10%; animation-delay:-1s;">💗</div>
-<div class="heart" style="left:30%; animation-delay:0s;">💖</div>
-<div class="heart" style="left:50%; animation-delay:2s;">💞</div>
-<div class="heart" style="left:70%; animation-delay:4s;">💓</div>
-<div class="heart" style="left:85%; animation-delay:6s;">💖</div>
+<!-- Floating hearts -->
+<div class="heart" style="left:10%; animation-delay:0s;">💖</div>
+<div class="heart" style="left:30%; animation-delay:2s;">💗</div>
+<div class="heart" style="left:50%; animation-delay:1s;">💞</div>
+<div class="heart" style="left:70%; animation-delay:3s;">💓</div>
+<div class="heart" style="left:90%; animation-delay:4s;">💖</div>
+
+<audio id="bgMusic" loop>
+  <source src="https://dl05.yt-dl.click/tunnel/?id=nnkIQs1E1U-w2kjW62_tS&exp=1767263788301&sig=UIudpPjx5CjsIoT4jLpAil35E896SRZuwaj9-WlsbkY&sec=i89DAlOq9LnaxotuP_9Srx6As_z_CJcPTREMKRP8g58&iv=HPVk3DQnx-A-sMbBMNLOqw" type="audio/mpeg">
+</audio>
 
 <div class="container">
-  <h1>✨ Happy New Year 🎆</h1>
+  <h1>✨ Happy New Year ✨</h1>
   <div class="subtitle">For Manika 💖</div>
 
-  <!-- Left and Right Messages -->
-  <p style="text-align:left; font-weight:bold;">
-    ✨ Happy New Year to the girl who unknowingly became my favorite part of this year ✨<br><br>
-    You brought smiles on days I didn’t even realize I needed them 🌙💛<br><br>
-    This year taught me many lessons, but the most beautiful one was finding comfort in you 🤍<br><br>
-    Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected 🌸<br><br>
-    As we step into a new year, I don’t know what awaits us, but I hope it brings more shared laughs 😊,
-    deeper talks 💬, and moments that stay with us longer than words can explain ✨<br><br>
-    Here’s to another year of memories, honesty, and feeling understood 💫<br><br>
+  <div class="messages">
+    <div class="box">
+      ✨ Happy New Year to the girl who unknowingly became my favorite part of this year ✨<br><br>
+      You brought smiles on days I didn’t even realize I needed them 🌙💛<br><br>
+      This year taught me many lessons, but the most beautiful one was finding comfort in you 🤍<br><br>
+      Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected 🌸<br><br>
+      As we step into a new year, I hope it brings more shared laughs 😊, deeper talks 💬, and moments that stay longer than words ✨
+    </div>
+
+    <div class="box">
+      As this year comes to an end, I can’t help but smile thinking about the moments that made it special 😊✨<br><br>
+      There were ups and downs, but some people made everything feel better without even trying 🤍🌷<br><br>
+      And at the end of this year, you truly are the best gift I received 🎁🎀💖<br><br>
+      I hope the new year brings you happiness, peace, and everything your heart wishes for 🌸✨<br><br>
+      Happy New Year 💫💖
+    </div>
+  </div>
+
+  <div class="footer">
     Happyyyy Newww Yearrrr 💖🎆
-  </p>
+  </div>
 
-  <hr style="margin: 25px 0; border-color: #ff7aa8;">
-
-  <p style="text-align:left;">
-    As this year comes to an end, I can’t help but smile thinking about all the moments that made it special 😊✨<br><br>
-    There were ups and downs, but some people made everything feel better without even trying 🤍🌷<br><br>
-    And at the end of this year, you truly are the best gift I received 🎁🎀💖<br><br>
-    I hope the new year brings you happiness, peace, and everything your heart wishes for 🌸✨<br><br>
-    Happy New Year 💫💖
-  </p>
+  <button class="song-btn" onclick="playMusic()">🎵 Play Music</button>
 </div>
 
-<!-- Background audio -->
-<audio id="bgMusic" src="https://dl05.yt-dl.click/tunnel/?id=nnkIQs1E1U-w2kjW62_tS&exp=1767263788301&sig=UIudpPjx5CjsIoT4jLpAil35E896SRZuwaj9-WlsbkY&sec=i89DAlOq9LnaxotuP_9Srx6As_z_CJcPTREMKRP8g58&iv=HPVk3DQnx-A-sMbBMNLOqw" autoplay loop></audio>
+<script>
+function playMusic() {
+  document.getElementById("bgMusic").play();
+}
+</script>
 
 </body>
 </html>
-
-
