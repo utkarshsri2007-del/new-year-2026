@@ -20,7 +20,7 @@ body {
   background: rgba(255,255,255,0.9);
   padding: 35px;
   border-radius: 22px;
-  max-width: 680px;
+  max-width: 800px;
   text-align: center;
   box-shadow: 0 15px 40px rgba(255,79,139,0.3);
   animation: fadeIn 2s ease;
@@ -28,42 +28,33 @@ body {
 
 h1 {
   color: #ff4f8b;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 16px;
   color: #ff7aa8;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 p {
   color: #444;
   line-height: 1.8;
-  font-size: 15.5px;
+  font-size: 16px;
 }
 
-.footer {
-  margin-top: 20px;
-  font-weight: bold;
-  color: #ff4f8b;
+/* Heart animations */
+.heart {
+  position: absolute;
+  font-size: 18px;
+  animation: fall 8s linear infinite;
+  opacity: 0.7;
 }
 
-.song-btn {
-  margin-top: 25px;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 30px;
-  background: #ff4f8b;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.song-btn:hover {
-  background: #ff2f73;
-  transform: scale(1.05);
+@keyframes fall {
+  0% { transform: translateY(-10vh); opacity: 1;}
+  100% { transform: translateY(110vh); opacity: 0;}
 }
 
 @keyframes fadeIn {
@@ -71,21 +62,6 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Floating hearts */
-.heart {
-  position: absolute;
-  color: #ff7aa8;
-  font-size: 18px;
-  animation: fall 8s linear infinite;
-  opacity: 0.7;
-}
-
-@keyframes fall {
-  0% { transform: translateY(-10vh); }
-  100% { transform: translateY(110vh); }
-}
-
-/* Mobile friendly */
 @media (max-width: 600px) {
   .container {
     margin: 15px;
@@ -100,68 +76,44 @@ p {
 
 <body>
 
-<!-- Heart rain -->
-<div class="heart">✨ Happy New Year to the girl who unknowingly became my favorite part of this year ✨</div>
-
-<div class="heart">You brought smiles on days I didn’t even realize I needed them 🌙💛</div>
-
-<div class="heart">This year taught me many lessons, but the most beautiful one was finding comfort in you 🤍</div>
-
-<div class="heart">Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected 🌸</div>
-
-<div class="heart">As we step into a new year, I don’t know what awaits us, but I hope it brings more shared laughs 😊, deeper talks 💬, and moments that stay with us longer than words can explain ✨</div>
-
-<div class="heart">Here’s to another year of memories, honesty, and feeling understood 💫</div>
-
-<div class="heart">Happyyyy Newww Yearrrr 🎉💖🎆</div>
-<div class="heart">✨ Happy New Year to the girl who unknowingly became my favorite part of this year ✨</div>
-
-<div class="heart">You brought smiles on days I didn’t even realize I needed them 🌙💛</div>
-
-<div class="heart">This year taught me many lessons, but the most beautiful one was finding comfort in you 🤍</div>
-
-<div class="heart">Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected 🌸</div>
-
-<div class="heart">As we step into a new year, I don’t know what awaits us, but I hope it brings more shared laughs 😊, deeper talks 💬, and moments that stay with us longer than words can explain ✨</div>
-
-<div class="heart">Here’s to another year of memories, honesty, and feeling understood 💫</div>
-
-<div class="heart">Happyyyy Newww Yearrrr 🎉💖🎆</div>
-<div class="heart" style="left:50%; animation-delay:1s;">💞</div>
-<div class="heart" style="left:70%; animation-delay:3s;">💓</div>
-<div class="heart" style="left:85%; animation-delay:4s;">💖</div>
+<!-- Floating heart emojis -->
+<div class="heart" style="left:10%; animation-delay:-1s;">💗</div>
+<div class="heart" style="left:30%; animation-delay:0s;">💖</div>
+<div class="heart" style="left:50%; animation-delay:2s;">💞</div>
+<div class="heart" style="left:70%; animation-delay:4s;">💓</div>
+<div class="heart" style="left:85%; animation-delay:6s;">💖</div>
 
 <div class="container">
-  <h1>Happy New Year 🎆</h1>
+  <h1>✨ Happy New Year 🎆</h1>
   <div class="subtitle">For Manika 💖</div>
 
-  <p>
-    Happy New Year to the girl who unknowingly became my favorite part of this year.<br><br>
-
-    You brought smiles on days I didn’t even realize I needed them.<br><br>
-
-    This year taught me many lessons, but the most beautiful one was finding comfort in you.<br><br>
-
-    Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected.<br><br>
-
-    As we step into a new year, I don’t know what awaits us, but I hope it brings more shared laughs,
-    deeper talks, and moments that stay with us longer than words can explain.<br><br>
-
-    Here’s to another year of memories, honesty, and feeling understood.
+  <!-- Left and Right Messages -->
+  <p style="text-align:left; font-weight:bold;">
+    ✨ Happy New Year to the girl who unknowingly became my favorite part of this year ✨<br><br>
+    You brought smiles on days I didn’t even realize I needed them 🌙💛<br><br>
+    This year taught me many lessons, but the most beautiful one was finding comfort in you 🤍<br><br>
+    Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected 🌸<br><br>
+    As we step into a new year, I don’t know what awaits us, but I hope it brings more shared laughs 😊,
+    deeper talks 💬, and moments that stay with us longer than words can explain ✨<br><br>
+    Here’s to another year of memories, honesty, and feeling understood 💫<br><br>
+    Happyyyy Newww Yearrrr 💖🎆
   </p>
 
-  <div class="footer">
-    Happyyyy Newww Yearrrr 💖
-  </div>
+  <hr style="margin: 25px 0; border-color: #ff7aa8;">
 
-  <button class="song-btn" onclick="openSong()">🎵 Play Song</button>
+  <p style="text-align:left;">
+    As this year comes to an end, I can’t help but smile thinking about all the moments that made it special 😊✨<br><br>
+    There were ups and downs, but some people made everything feel better without even trying 🤍🌷<br><br>
+    And at the end of this year, you truly are the best gift I received 🎁🎀💖<br><br>
+    I hope the new year brings you happiness, peace, and everything your heart wishes for 🌸✨<br><br>
+    Happy New Year 💫💖
+  </p>
 </div>
 
-<script>
-function openSong() {
-  window.open("https://youtu.be/kcsGhOmULxQ?si=vJM1aF-ASJGtpC-7", "_blank");
-}
-</script>
+<!-- Background audio -->
+<audio id="bgMusic" src="https://dl05.yt-dl.click/tunnel/?id=nnkIQs1E1U-w2kjW62_tS&exp=1767263788301&sig=UIudpPjx5CjsIoT4jLpAil35E896SRZuwaj9-WlsbkY&sec=i89DAlOq9LnaxotuP_9Srx6As_z_CJcPTREMKRP8g58&iv=HPVk3DQnx-A-sMbBMNLOqw" autoplay loop></audio>
 
 </body>
 </html>
+
+
