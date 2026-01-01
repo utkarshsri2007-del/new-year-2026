@@ -26,3 +26,146 @@
 
   <strong>Happyyyy Newww Yearrrr</strong> 💖🎆
 </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year Manika</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffd1e8, #ffc0cb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255,255,255,0.9);
+  padding: 35px;
+  border-radius: 22px;
+  max-width: 680px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(255,79,139,0.3);
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  color: #ff4f8b;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #ff7aa8;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 15.5px;
+}
+
+.footer {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ff4f8b;
+}
+
+.song-btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4f8b;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.song-btn:hover {
+  background: #ff2f73;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  color: #ff7aa8;
+  font-size: 18px;
+  animation: fall 8s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(110vh); }
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+  .container {
+    margin: 15px;
+    padding: 25px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Heart rain -->
+<div class="heart" style="left:10%; animation-delay:0s;">💗</div>
+<div class="heart" style="left:25%; animation-delay:2s;">💖</div>
+<div class="heart" style="left:50%; animation-delay:1s;">💞</div>
+<div class="heart" style="left:70%; animation-delay:3s;">💓</div>
+<div class="heart" style="left:85%; animation-delay:4s;">💖</div>
+
+<div class="container">
+  <h1>Happy New Year 🎆</h1>
+  <div class="subtitle">For Manika 💖</div>
+
+  <p>
+    Happy New Year to the girl who unknowingly became my favorite part of this year.<br><br>
+
+    You brought smiles on days I didn’t even realize I needed them.<br><br>
+
+    This year taught me many lessons, but the most beautiful one was finding comfort in you.<br><br>
+
+    Some people enter your life slowly, quietly… and then suddenly, they matter more than you ever expected.<br><br>
+
+    As we step into a new year, I don’t know what awaits us, but I hope it brings more shared laughs,
+    deeper talks, and moments that stay with us longer than words can explain.<br><br>
+
+    Here’s to another year of memories, honesty, and feeling understood.
+  </p>
+
+  <div class="footer">
+    Happyyyy Newww Yearrrr 💖
+  </div>
+
+  <button class="song-btn" onclick="openSong()">🎵 Play Song</button>
+</div>
+
+<script>
+function openSong() {
+  window.open("https://youtu.be/kcsGhOmULxQ?si=vJM1aF-ASJGtpC-7", "_blank");
+}
+</script>
+
+</body>
+</html>
